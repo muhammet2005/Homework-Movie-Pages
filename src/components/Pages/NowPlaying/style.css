@@ -1,0 +1,17 @@
+.nowPlaying{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.movieInfo{
+    width: 25%;
+    margin: 20px 0;
+}
+.movieInfo img{
+    box-shadow: 19px 18px 12px 6px #840606;
+}
+h1{
+    text-align: center;
+    color: white;
+
+}

@@ -1,15 +1,17 @@
 import React from 'react';
-import "./style.css"
-const Footer = () => {
+
+const Home = () => {
     return (
-        <div id="footer">
+        <div id={"home"}>
             <div className="container">
-                <div className="footer">
+                <h1>Home</h1>
+                <div className="home">
 
                 </div>
             </div>
+
         </div>
     );
 };
 
-export default Footer;
+export default Home;

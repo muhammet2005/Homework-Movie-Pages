@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import "./style.css"
 import axios from "axios";
 import {key} from "../../API/api";
 
@@ -16,13 +15,13 @@ const UpComing = () => {
         getUpComing()
     }, [])
     return (
-        <div id='popular'>
+        <div id='upComing'>
             <div className='container'>
                 <h1>Up Coming</h1>
                 <div className='upComing'>
                     {
                         upComing.map(el => (
-                            <div className={"movieInfo"}>
+                            <div className={"upComingMovies"}>
                                 <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${el.poster_path}`} alt="" />
                             </div>
                         ))

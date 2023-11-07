@@ -1,5 +1,4 @@
 import axios from 'axios';
-import "./style.css"
 import React, { useEffect, useState } from 'react';
 import { key } from "../../API/api"
 
@@ -16,7 +15,7 @@ const NowPlaying = () => {
         getNowPlaying()
     }, [])
     return (
-        <div id='popular'>
+        <div id='nowPlaying'>
             <div className='container'>
                 <h1>Now Playing</h1>
                 <div className='nowPlaying'>

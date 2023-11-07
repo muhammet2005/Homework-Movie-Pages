@@ -6,12 +6,14 @@ import Popular from "./components/Pages/Popular";
 import NowPlaying from "./components/Pages/NowPlaying";
 import UpComing from "./components/Pages/UpComing";
 import TopRated from "./components/Pages/TopRated";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
         <Header/>
       <Routes>
+          <Route path={"/"} element={<Home/>}/>
           <Route path={"/popular"} element={<Popular/>} />
           <Route path={"/now_playing"} element={<NowPlaying/>} />
           <Route path={"/up_coming"} element={<UpComing/>}  />

@@ -19,11 +19,11 @@ const Popular = () => {
         <div id='popular'>
             <div className='container'>'
                 <h1>Popular</h1>
-                <div className='nowPlaying'>
+                <div className='popular'>
 
                     {
                         popular.map(el => (
-                            <div className={"movieInfo"}>
+                            <div className={"popularMovies"}>
                                 <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${el.poster_path}`} alt="" />
                         </div>
                         ))

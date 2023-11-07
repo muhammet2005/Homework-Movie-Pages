@@ -1,0 +1,256 @@
+/*Home*/
+
+
+#home{
+        width: 100%;
+        height: 600px;
+
+
+        background: url("https://scontent.ffru1-4.fna.fbcdn.net/v/t39.30808-6/300504067_445684367592498_5957156852801815606_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JPztf-vA_p8AX884g0u&_nc_ht=scontent.ffru1-4.fna&oh=00_AfASCVYekXfhVqgMBDRZZO3CrTdVs-eSXtUAgDvvbIbqSQ&oe=654E33C3");
+        background-repeat: no-repeat;
+
+}
+
+
+.home button{
+    padding: 5px 20px;
+}
+.home input{
+    width: 80%;
+}
+.home h1{
+    color: white;
+}
+.home h3{
+    margin: 0 0 180px 0;
+    color: white;
+}
+.home input{
+    border: none;
+    padding: 6px;
+    outline: none;
+    position: relative;
+    border-radius: 10px;
+}
+.home button{
+    border: 1px solid greenyellow;
+    background: greenyellow;
+    border-radius: 10px;
+    position: absolute;
+    right: 280px;
+
+    color: black;
+
+}
+
+/*Popular*/
+
+.popular{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 30px;
+}
+.popularMovies{
+    width: 20%;
+    height: 37vh;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.popularMovies::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 140%;
+    background: linear-gradient(#70e11e, #ee7526);
+    animation: animate 4s linear infinite;
+    border-radius: 10px;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+
+.popularMovies img{
+    z-index: 10;
+    border-radius: 10px;
+}
+#popular h1{
+    text-align: center;
+    color: white;
+
+}
+
+
+
+
+
+
+/* Now Playing*/
+
+.nowPlaying{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 30px;
+}
+.movieInfo{
+    width: 20%;
+    height: 37vh;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movieInfo::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 140%;
+    background: linear-gradient(red,blue);
+    animation: animate 4s linear infinite;
+    border-radius: 10px;
+}
+@keyframes animate {
+0%{
+    transform: rotate(0deg);
+}
+    100%{
+        transform: rotate(350deg);
+    }
+}
+
+.movieInfo img{
+    z-index: 10;
+    border-radius: 10px;
+}
+#nowPlaying h1{
+    text-align: center;
+    color: white;
+
+}
+
+
+
+
+
+
+/*Up Coming*/
+
+
+.upComing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 30px;
+}
+.upComingMovies{
+    width: 20%;
+    height: 37vh;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.upComingMovies::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 140%;
+    background: linear-gradient(yellow,deeppink);
+    animation: animate 4s linear infinite;
+    border-radius: 10px;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+
+.upComingMovies img{
+    z-index: 10;
+    border-radius: 10px;
+}
+#upComing h1{
+    text-align: center;
+    color: white;
+
+}
+
+
+
+
+
+
+
+/*Top Rated*/
+
+
+.topRated{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 30px;
+}
+.topRatedMovies{
+    width: 20%;
+    height: 37vh;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.topRatedMovies::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 140%;
+    background: linear-gradient(purple,aqua);
+    animation: animate 4s linear infinite;
+    border-radius: 10px;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+
+.topRatedMovies img{
+    z-index: 10;
+    border-radius: 10px;
+}
+ #topRated h1{
+    text-align: center;
+    color: white;
+
+ }
+
+

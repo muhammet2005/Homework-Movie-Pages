@@ -15,13 +15,13 @@ const TopRated = () => {
         getTopRated()
     }, [])
     return (
-        <div id='popular'>
+        <div id='topRated'>
             <div className='container'>
                 <h1>Top Rated</h1>
-                <div className='nowPlaying'>
+                <div className='topRated'>
                     {
                         topRated.map(el => (
-                            <div className={"movieInfo"}>
+                            <div className={"topRatedMovies"}>
                                 <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${el.poster_path}`} alt="" />
                             </div>
                         ))

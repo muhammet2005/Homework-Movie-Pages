@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Button = ({ onToggleBackground }) => {
+const Button = () => {
     const [btn, setBtn] = useState(true);
 
     const background = () => {
@@ -8,8 +8,7 @@ const Button = ({ onToggleBackground }) => {
         document.body.style.backgroundColor = btn ? '#222' : '#dacece';
 
     };
-    onToggleBackground = "white"
-    return (
+        return (
         <div id="button">
             <button
                 style={{

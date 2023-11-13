@@ -4,7 +4,7 @@ import { key } from '../../API/api';
 import { useParams } from 'react-router-dom';
 import './style.css';
 
-const MovieDetail = ({onToggleBackground}) => {
+const MovieDetail = () => {
     const { id } = useParams();
     const [detail, setDetail] = useState();
 

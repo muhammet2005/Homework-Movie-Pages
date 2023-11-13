@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {key} from "../../API/api";
+import MovieCart from "../MovieCart";
 
 const TopRated = () => {
     const [topRated,SetTopRated] = useState([])
@@ -20,11 +21,7 @@ const TopRated = () => {
                 <h1>Top Rated</h1>
                 <div className='topRated'>
                     {
-                        topRated.map(el => (
-                            <div className={"topRatedMovies"}>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${el.poster_path}`} alt="" />
-                            </div>
-                        ))
+                        topRated.map(el => <MovieCart elem={el} nameClass={"topRatedMovies"}/>)
                     }
                 </div>
             </div>

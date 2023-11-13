@@ -64,8 +64,8 @@
     gap: 30px;
 }
 .popularMovies{
-    width: 20%;
-    height: 37vh;
+    width: 230px;
+    height: 340px;
     margin: 20px 0;
     position: relative;
     display: flex;
@@ -99,7 +99,7 @@
 }
 #popular h1{
     text-align: center;
-    color: white;
+    color: red;
 
 }
 
@@ -117,8 +117,8 @@
     gap: 30px;
 }
 .movieInfo{
-    width: 20%;
-    height: 37vh;
+    width: 230px;
+    height: 340px;
     margin: 20px 0;
     position: relative;
     display: flex;
@@ -152,8 +152,7 @@
 }
 #nowPlaying h1{
     text-align: center;
-    color: white;
-
+    color: red;
 }
 
 
@@ -171,8 +170,8 @@
     gap: 30px;
 }
 .upComingMovies{
-    width: 20%;
-    height: 37vh;
+    width: 230px;
+    height: 340px;
     margin: 20px 0;
     position: relative;
     display: flex;
@@ -206,7 +205,7 @@
 }
 #upComing h1{
     text-align: center;
-    color: white;
+    color: red;
 
 }
 
@@ -226,8 +225,8 @@
     gap: 30px;
 }
 .topRatedMovies{
-    width: 20%;
-    height: 37vh;
+    width: 230px;
+    height: 340px;
     margin: 20px 0;
     position: relative;
     display: flex;
@@ -261,7 +260,7 @@
 }
  #topRated h1{
     text-align: center;
-    color: white;
+    color: red;
 
  }
 

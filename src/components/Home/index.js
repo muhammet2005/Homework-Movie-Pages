@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Hero from "./Hero";
 const Home = () => {
     return (
         <div id={"home"}>
@@ -14,6 +14,7 @@ const Home = () => {
                 </div>
             </div>
 
+            <Hero/>
         </div>
     );
 };

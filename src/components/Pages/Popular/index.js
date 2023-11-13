@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { key } from "../../API/api"
+import MovieCart from "../MovieCart";
 
 const Popular = () => {
     const [popular,SetPopular] = useState([])
@@ -22,11 +23,7 @@ const Popular = () => {
                 <div className='popular'>
 
                     {
-                        popular.map(el => (
-                            <div className={"popularMovies"}>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${el.poster_path}`} alt="" />
-                        </div>
-                        ))
+                        popular.map(el => <MovieCart elem={el} nameClass={"popularMovies"}/>)
                     }
                 </div>
             </div>

@@ -1,0 +1,59 @@
+.movieDetail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 0 0;
+
+
+}
+.movieDetail--img img{
+    width: 70%;
+
+}
+p{
+    font-size: 18px;
+    color: aqua;
+}
+h1{
+    color: aqua;
+}
+.vote{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+
+
+}
+.vote div{
+    background: green ;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vote div p {
+    font-size: 16px;
+}
+
+
+.howManyVotes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+
+
+}
+.howManyVotes div{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vote div p {
+    font-size: 16px;
+}

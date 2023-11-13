@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {key} from "../../API/api";
+import MovieCart from "../MovieCart";
 
 const UpComing = () => {
     const [upComing,SetUpComing] = useState([])
@@ -20,11 +21,7 @@ const UpComing = () => {
                 <h1>Up Coming</h1>
                 <div className='upComing'>
                     {
-                        upComing.map(el => (
-                            <div className={"upComingMovies"}>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${el.poster_path}`} alt="" />
-                            </div>
-                        ))
+                        upComing.map(el => <MovieCart elem={el} nameClass={"upComingMovies"}/>)
                     }
                 </div>
             </div>

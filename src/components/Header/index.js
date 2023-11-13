@@ -1,16 +1,17 @@
-import React from 'react';
-import "./style.css"
-import Logo from "../../assets/img/popCorn.png"
-import {NavLink} from "react-router-dom";
+import React, { useState } from 'react';
+import "./style.css";
+import Logo from "../../assets/img/popCorn.png";
+import { NavLink } from "react-router-dom";
+import Button from "../Pages/Button";
 
 const Header = () => {
+
     return (
-        <div id={"header"}>
-            <div className="container">
+        <div id="header">
+            <div className={"container"}>
                 <div className="header">
                     <div className="logo">
-                        <img src={Logo} alt=""/>
-
+                        <img src={Logo} alt="" />
                     </div>
                     <div className="nav-bar">
                         <NavLink to={"/"}>Home</NavLink>
@@ -19,11 +20,8 @@ const Header = () => {
                         <NavLink to={"/up_coming"}>Up Coming</NavLink>
                         <NavLink to={"/top_rated"}>Top Rated</NavLink>
                     </div>
-
                     <div className="btn">
-                        <button>
-                            Dark
-                        </button>
+                        <Button/>
                     </div>
                 </div>
             </div>
@@ -31,4 +29,4 @@ const Header = () => {
     );
 };
 
-export default Header ;
+export default Header;

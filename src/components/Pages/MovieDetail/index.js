@@ -21,40 +21,42 @@ const MovieDetail = () => {
     }, [getId]);
 
     return (
-        <div id={'movieDetail'}>
+        <div id={'movieDetail'} style={{
+            backgroundImage: detail ? `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${detail.backdrop_path})` : '',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            height: "100vh",
+            width: "100%",
+            objectFit: "cover",
+        }}>
             {detail && (
                 <div className={"container"}>
-                    <div className={"movieDetail"}>
+                    <div className={"movieDetail"} style={{
+                        margin: "20px 0 0 0"
+                    }}>
                         <div className="movieDetail--img">
                             <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${detail.poster_path}`} alt="" />
-
                         </div>
                         <div className="movieDetail--info">
-                            <h1> <span style={{color: "green" }}>Name of the movie : </span>{detail.title}</h1>
-                            <p> <span style={{color: "green" }}>Release date: </span> {detail.release_date}</p>
-                            <p> <span style={{color: "green" }}>Description: </span> <br/>
+                            <h1> <span style={{ color: "green" }}>Name of the movie : </span>{detail.title}</h1>
+                            <p> <span style={{ color: "green" }}>Release date: </span> {detail.release_date}</p>
+                            <p> <span style={{ color: "green" }}>Description: </span> <br />
                                 {detail.overview}</p>
 
                             <div className="vote">
-                                <p style={{color: "green" }}>Average vote: </p>
-                                <div><p>{Math.round(detail.vote_average)}</p></div>
+                                <p style={{ color: "green" }}>Average vote: </p>
+                                <div><p>{Math.round(detail.vote_average) + " of 10"}</p></div>
                             </div>
 
                             <div className="howManyVotes">
-                                <p style={{color: "green" }}> All votes: </p>
+                                <p style={{ color: "green" }}> All votes: </p>
                                 <div>
                                     <p>{detail.popularity}</p>
                                 </div>
-
                             </div>
-
                         </div>
-
-
-
                     </div>
                 </div>
-
             )}
         </div>
     );

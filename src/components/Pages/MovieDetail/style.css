@@ -7,29 +7,29 @@
 
 }
 .movieDetail--img img{
-    width: 70%;
+    width: 90%;
 
 }
 p{
-    font-size: 18px;
-    color: aqua;
+    font-size: 20px;
+    color: white;
 }
 h1{
-    color: aqua;
+    color: white;
 }
 .vote{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 160px;
+    width: 190px;
 
 
 }
 .vote div{
     background: green ;
-    border-radius: 50%;
+    border-radius: 10%;
     height: 30px;
-    width: 30px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;

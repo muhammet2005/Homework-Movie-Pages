@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { key } from "../../API/api"
 import MovieCart from "../MovieCart";
 
-const Popular = () => {
+const Popular = ({dark}) => {
     const [popular,SetPopular] = useState([])
     const getPopular = () => {
         axios(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=3`)
@@ -19,7 +19,9 @@ const Popular = () => {
     return (
         <div id='popular'>
             <div className='container'>'
-                <h1>Popular</h1>
+                <h1 style={{
+                    color: dark ?  "black" : "white"
+                }}>Popular</h1>
                 <div className='popular'>
 
                     {

@@ -1,27 +1,55 @@
+// Header.js
 import React  from 'react';
 import "./style.css";
 import Logo from "../../assets/img/popCorn.png";
 import { NavLink } from "react-router-dom";
-import Button from "../Pages/Button";
 
-const Header = () => {
+const Header = ({dark,setDark}) => {
+    const body = ()=> {
+        document.body.style.background = dark ? "#dacece" : "#222"
+    }
+    body()
 
     return (
-        <div id="header">
+        <div id="header"   >
             <div className={"container"}>
-                <div className="header">
+                <div className="header" style={{
+                    borderBottom: dark? `1px solid black` : `1px solid white`
+                }}>
                     <div className="logo">
                         <img src={Logo} alt="" />
                     </div>
-                    <div className="nav-bar">
-                        <NavLink to={"/"}>Home</NavLink>
-                        <NavLink to={"/popular"}>Popular</NavLink>
-                        <NavLink to={"/now_playing"}>Now Playing</NavLink>
-                        <NavLink to={"/up_coming"}>Up Coming</NavLink>
-                        <NavLink to={"/top_rated"}>Top Rated</NavLink>
+                    <div className="nav-bar" >
+                        <NavLink to={"/"} style={{
+                            color: dark ? "black" : "white"
+                        }}>Home</NavLink>
+
+
+                        <NavLink to={"/popular"} style={{
+                            color: dark ? "black" : "white"
+                        }}> Popular </NavLink>
+
+
+                        <NavLink to={"/now_playing"} style={{
+                            color: dark ? "black" : "white"
+                        }}> Now Playing </NavLink>
+                        <NavLink to={"/up_coming"} style={{
+                            color: dark ? "black" : "white"
+                        }}> Up Coming </NavLink>
+                        <NavLink to={"/top_rated"} style={{
+                            color: dark ? "black" : "white"
+                        }}> Top Rated </NavLink>
                     </div>
                     <div className="btn">
-                        <Button/>
+                        <button onClick={()=>{
+                            setDark(!dark)
+                         }}  style={{
+                            width: '100px',
+                            backgroundColor: dark ? '#222' : '#c9b7b7',
+                            color: dark ? '#c9b7b7' : '#222', }}>
+
+                            {dark ? 'Dark' : 'White'}
+                        </button>
                     </div>
                 </div>
             </div>

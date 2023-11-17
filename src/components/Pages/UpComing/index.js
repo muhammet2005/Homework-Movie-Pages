@@ -3,7 +3,7 @@ import axios from "axios";
 import {key} from "../../API/api";
 import MovieCart from "../MovieCart";
 
-const UpComing = () => {
+const UpComing = ({dark}) => {
     const [upComing,SetUpComing] = useState([])
     const getUpComing = () => {
         axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=3`)
@@ -18,7 +18,9 @@ const UpComing = () => {
     return (
         <div id='upComing'>
             <div className='container'>
-                <h1>Up Coming</h1>
+                <h1 style={{
+                    color: dark ?  "black" : "white"
+                }}>Up Coming</h1>
                 <div className='upComing'>
                     {
                         upComing.map(el => <MovieCart elem={el} nameClass={"upComingMovies"}/>)

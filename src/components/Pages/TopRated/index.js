@@ -3,7 +3,7 @@ import axios from "axios";
 import {key} from "../../API/api";
 import MovieCart from "../MovieCart";
 
-const TopRated = () => {
+const TopRated = ({dark}) => {
     const [topRated,SetTopRated] = useState([])
     const getTopRated = () => {
         axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=3`)
@@ -18,7 +18,9 @@ const TopRated = () => {
     return (
         <div id='topRated'>
             <div className='container'>
-                <h1>Top Rated</h1>
+                <h1 style={{
+                    color: dark ?  "black" : "white"
+                }}>Top Rated</h1>
                 <div className='topRated'>
                     {
                         topRated.map(el => <MovieCart elem={el} nameClass={"topRatedMovies"}/>)

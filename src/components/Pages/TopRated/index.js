@@ -5,22 +5,40 @@ import MovieCart from "../MovieCart";
 
 const TopRated = ({dark}) => {
     const [topRated,SetTopRated] = useState([])
+    const [sortVotes, setSortVotes] = useState('desc'); // Default sorting order is descending
+
     const getTopRated = () => {
         axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=3`)
             .then(res => {
-                console.log(res)
-                SetTopRated(res.data.results)
+                const sortedResults = res.data.results.sort((a, b) => {
+                    if (sortVotes === 'asc') {
+                        return a.vote_average - b.vote_average;
+                    } else {
+                        return b.vote_average - a.vote_average;
+                    }
+                });
+                SetTopRated(sortedResults);
             });
     };
     useEffect(() => {
         getTopRated()
-    }, [])
+    }, [sortVotes])
+
+    const handleSortChange = (e) => {
+        setSortVotes(e.target.value);
+    };
     return (
         <div id='topRated'>
             <div className='container'>
                 <h1 style={{
                     color: dark ?  "black" : "white"
-                }}>Top Rated</h1>
+                }}>Top Rated
+
+                    <select className={"nowPlaying--selector"} onChange={handleSortChange} value={sortVotes}>
+                        <option value="desc">Highest Rated </option>
+                        <option value="asc">Lowest Rated </option>
+                    </select>
+                </h1>
                 <div className='topRated'>
                     {
                         topRated.map(el => <MovieCart elem={el} nameClass={"topRatedMovies"}/>)

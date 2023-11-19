@@ -154,6 +154,10 @@
     text-align: center;
     color: red;
 }
+.nowPlaying--selector{
+    display: flex;
+    margin: 0 0 0 70px;
+}
 
 
 

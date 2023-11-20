@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 const Header = ({dark,setDark}) => {
     const body = ()=> {
         document.body.style.background = dark ? "#dacece" : "#222"
+        document.body.style.transition = "1"
     }
     body()
 

@@ -269,3 +269,8 @@
  }
 
 
+/*Movie Trailer*/
+
+.movieTrailer--container{
+    display: flex;
+}

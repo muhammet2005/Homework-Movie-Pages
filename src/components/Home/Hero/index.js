@@ -2,6 +2,7 @@ import React from 'react';
 import "./style.css"
 
 const Hero = () => {
+
     return (
         <div id="hero">
             <div className="container">

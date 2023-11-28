@@ -4,8 +4,10 @@ import { key } from '../../API/api';
 import { useParams } from 'react-router-dom';
 import './style.css';
 import MovieTrailer from '../MovieTrailer';
+import Actors from "../Actors";
 
 const MovieDetail = () => {
+    const [actors , setActors] = useState(false)
     const { id } = useParams();
     const [detail, setDetail] = useState();
     const [showTrailer, setShowTrailer] = useState(false);
@@ -26,6 +28,10 @@ const MovieDetail = () => {
     const toggleTrailer = () => {
         setShowTrailer(!showTrailer);
     };
+    
+    const showActors = ()=>{
+        setActors(!actors)
+    }
 
     return (
         <div
@@ -75,14 +81,24 @@ const MovieDetail = () => {
                                 </div>
                             </div>
 
-                            {/* Add the button to toggle MovieTrailer */}
-                            <button onClick={toggleTrailer} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px"}}>Show Trailer</button>
+                            <div className="buttons" style={{display: 'flex',
+                            flexDirection:"column", gap: "10px"}}>
+                                <button onClick={toggleTrailer} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px" ,width :"200px"}}>Show Trailer</button>
+                                <button onClick={showActors} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px",width :"200px"}}>Show Actors</button>
+                            </div>
+
                         </div>
                     </div>
                     <div className={'move'} style={{ padding: '0 0 100px 0 ' }}>
                         {/* Conditionally render MovieTrailer based on showTrailer state */}
                         {showTrailer && <MovieTrailer />}
                     </div>
+
+                    <div>
+                        {actors && <Actors movieId={id}/>}
+                    </div>
+
+
                 </div>
             )}
         </div>

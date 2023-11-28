@@ -10,6 +10,7 @@ import Home from './components/Home';
 import MovieDetail from './components/Pages/MovieDetail';
 import { useState } from 'react';
 import MovieSearch from "./components/Home/MovieSearch";
+import Actors from "./components/Pages/Actors";
 
 function App() {
     const [dark, setDark] = useState(false);
@@ -25,7 +26,7 @@ function App() {
                 <Route path={'/top_rated'} element={<TopRated dark={dark} />} />
                 <Route path={'/movie-detail/:id'} element={<MovieDetail />} />
                 <Route path={'/movie-search/:movieName'} element={<MovieSearch/>} />
-
+                <Route path={'/person/:personID'} element={<Actors/>} />
             </Routes>
         </>
     );

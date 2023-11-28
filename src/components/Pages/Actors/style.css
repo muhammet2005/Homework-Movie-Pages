@@ -1,0 +1,13 @@
+.photo {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0 0 0;
+}
+.photo .actorsPhoto {
+  width: 370px;
+}
+.photo .actorsPhoto img {
+  width: 90%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+.actorDetail {
+  display: flex;
+  margin: 40px 0 0 0;
+}
+.actorDetail .actorImage {
+  width: 400px;
+  margin: 0 20px 0 0;
+}
+.actorDetail .actorBiography span {
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */

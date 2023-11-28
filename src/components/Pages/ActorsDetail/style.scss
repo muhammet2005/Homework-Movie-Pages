@@ -1,0 +1,17 @@
+.actorDetail{
+  display: flex;
+  margin: 40px 0 0 0;
+
+  .actorImage{
+    width: 400px;
+    margin: 0 20px 0 0 ;
+
+
+  }
+
+  .actorBiography{
+    span{
+      color: green;
+    }
+  }
+}

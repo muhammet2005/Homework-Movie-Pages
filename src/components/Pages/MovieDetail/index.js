@@ -90,7 +90,6 @@ const MovieDetail = () => {
                         </div>
                     </div>
                     <div className={'move'} style={{ padding: '0 0 100px 0 ' }}>
-                        {/* Conditionally render MovieTrailer based on showTrailer state */}
                         {showTrailer && <MovieTrailer />}
                     </div>
 

@@ -1,13 +1,15 @@
-.photoContainer{
+.photo{
   display: flex;
   justify-content: space-between;
   margin: 100px 0 0 0 ;
 
-   .actorsPhoto{
-     width: 170px;
+  .actorsPhoto{
+      width: 370px;
 
-     img{
-       width: 100%;
-     }
-   }
+      img{
+        width: 90%;
+      }
+
+  }
+
 }

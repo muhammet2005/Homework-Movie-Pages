@@ -27,7 +27,7 @@ const ActorsDetail = ({dark}) => {
         <div className="container">
             <div className="actorDetail" style={{color: dark ? "black" : "white" }}>
                 <div className="actorImage">
-                    <img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${detail.profile_path ? detail.profile_path : "Empty"}`} alt=""/>
+                    <img loading="lazy" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${detail.profile_path ? detail.profile_path : "Empty"}`} alt=""/>
                 </div>
                 <div className="actorBiography">
                     <h2 style={{color: dark ? "black" : "white" }}> <span>Name: </span> {detail.name ? detail.name : "Empty"}</h2>

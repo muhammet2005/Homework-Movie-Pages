@@ -1,10 +1,35 @@
 // Header.js
-import React  from 'react';
+import React, {useEffect, useState} from 'react';
 import "./style.css";
 import Logo from "../../assets/img/popCorn.png";
-import { NavLink } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 const Header = ({dark,setDark}) => {
+
+    const [value, setValue] = useState("");
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleEnterKey = (e) => {
+            if (e.key === "Enter" && value.trim() !== "") {
+                navigate(`/movie-search/${value}`);
+            }
+        };
+
+        // Add an event listener for keydown
+        document.addEventListener('keydown', handleEnterKey);
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+            document.removeEventListener('keydown', handleEnterKey);
+        };
+    }, [value, navigate]);
+
+    const handleSearch = () => {
+        if (value.trim() !== "") {
+            navigate(`/movie-search/${value}`);
+        }
+    };
     const body = ()=> {
         document.body.style.background = dark ? "#dacece" : "#222"
         document.body.style.transition = "1"
@@ -41,6 +66,12 @@ const Header = ({dark,setDark}) => {
                             color: dark ? "black" : "white"
                         }}> Top Rated </NavLink>
                     </div>
+                    <input className={"headerInput"}
+                        type="search"
+                        onChange={(e) => setValue(e.target.value)}
+                        placeholder={"Search movie..."}
+                    />
+                    <button  className={"searchBtn"} onClick={handleSearch}>Search</button>
                     <div className="btn">
                         <button onClick={()=>{
                             setDark(!dark)

@@ -1,0 +1,15 @@
+.nowPlaying--selector{
+  width: 150px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: #222;
+  font-size: 20px;
+  font-family: 'roboto',  sans-serif;
+  transition: 1.5s ;
+
+  option{
+    color: #222;
+    transition: 1.5s ;
+  }
+}

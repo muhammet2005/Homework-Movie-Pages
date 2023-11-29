@@ -1,7 +1,7 @@
 .photo {
   display: flex;
   justify-content: space-between;
-  margin: 100px 0 0 0;
+  margin: 150px 0 0 0;
 }
 .photo .actorsPhoto {
   width: 370px;

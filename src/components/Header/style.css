@@ -32,4 +32,26 @@ a:hover{
     font-weight: 500;
 }
 
+.headerInput{
+    width: 200px;
+    border-radius: 28px  ;
+    border: none;
+    padding: 10px;
+    outline: none;
+    position: relative;
+}
+.searchBtn{
+    padding: 10px 20px;
+    border: none;
+    background: greenyellow;
+    border-radius: 28px;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.searchBtn:hover{
+    background: green;
+
+}
 

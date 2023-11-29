@@ -28,7 +28,7 @@ const MovieDetail = () => {
     const toggleTrailer = () => {
         setShowTrailer(!showTrailer);
     };
-    
+
     const showActors = ()=>{
         setActors(!actors)
     }
@@ -36,58 +36,56 @@ const MovieDetail = () => {
     return (
         <div
             id={'movieDetail'}
-            style={{
-                backgroundImage: detail ? `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${detail.backdrop_path})` : '',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                height: '70vh',
-                width: '100%',
-                objectFit: 'cover',
-            }}
+            className={'background-container'}
         >
             {detail && (
                 <div className={'container'}>
-                    <div className={'movieDetail'} style={{ margin: '20px 0 0 0' }}>
-                        <div className="movieDetail--img">
-                            <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${detail.poster_path}`} alt="" />
-                        </div>
-                        <div className="movieDetail--info">
-                            <h1>
-                                {' '}
-                                <span style={{ color: 'green' }}>Name of the movie : </span>
-                                {detail.title}
-                            </h1>
-                            <p>
-                                {' '}
-                                <span style={{ color: 'green' }}>Release date: </span> {detail.release_date}
-                            </p>
-                            <p>
-                                {' '}
-                                <span style={{ color: 'green' }}>Description: </span> <br />
-                                {detail.overview}
-                            </p>
+                    <div className={'movieDetail'} >
 
-                            <div className="vote">
-                                <p style={{ color: 'green' }}>Average vote: </p>
-                                <div>
-                                    <p>{Math.round(detail.vote_average) + ' of 10'}</p>
+                        <img className="backgroundIMG" src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${detail.backdrop_path}`} alt=""/>
+                        <div className="componentsOn">
+                            <div className="movieDetail--img">
+                                <img style={{
+                                }} src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${detail.poster_path}`} alt="" />
+                            </div>
+                            <div className="movieDetail--info">
+                                <h1>
+                                    {' '}
+                                    <span style={{ color: 'green'}}>Name of the movie: </span> {detail.title}
+                                </h1>
+                                <p>
+                                    {' '}
+                                    <span style={{ color: 'green' }}>Release date: </span> {detail.release_date}
+                                </p>
+                                <p>
+                                    {' '}
+                                    <span style={{ color: 'green' }}>Description: </span> <br />
+                                    {detail.overview}
+                                </p>
+
+                                <div className="vote">
+                                    <p style={{ color: 'green' }}>Average vote: </p>
+                                    <div>
+                                        <p>{Math.round(detail.vote_average) + ' of 10'}</p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="howManyVotes">
-                                <p style={{ color: 'green' }}> All votes: </p>
-                                <div>
-                                    <p>{detail.popularity}</p>
+                                <div className="howManyVotes">
+                                    <p style={{ color: 'green' }}> All votes: </p>
+                                    <div>
+                                        <p>{detail.popularity}</p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="buttons" style={{display: 'flex',
-                            flexDirection:"column", gap: "10px"}}>
-                                <button onClick={toggleTrailer} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px" ,width :"200px"}}>Show Trailer</button>
-                                <button onClick={showActors} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px",width :"200px"}}>Show Actors</button>
-                            </div>
+                                <div className="buttons" style={{display: 'flex',
+                                    flexDirection:"column", gap: "10px"}}>
+                                    <button onClick={toggleTrailer} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px" ,width :"200px"}}>Show Trailer</button>
+                                    <button onClick={showActors} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px",width :"200px"}}>{showActors ? 'Look down' : "Show Actors"}</button>
+                                </div>
 
+                            </div>
                         </div>
+
                     </div>
                     <div className={'move'} style={{ padding: '0 0 100px 0 ' }}>
                         {showTrailer && <MovieTrailer />}

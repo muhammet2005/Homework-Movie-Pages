@@ -3,11 +3,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { key } from "../../API/api"
 import MovieCart from "../MovieCart";
+import "./style.scss"
 
 const Popular = ({ dark }) => {
     const [popular, setPopular] = useState([]);
     const [sortVotes, setSortVotes] = useState('desc'); // Default sorting order is descending
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getPopular = () => {
         axios(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=3`)
             .then(res => {
@@ -24,7 +26,7 @@ const Popular = ({ dark }) => {
 
     useEffect(() => {
         getPopular();
-    }, [sortVotes]);
+    }, [getPopular, sortVotes]);
 
     useEffect(() => {
         console.log(popular);

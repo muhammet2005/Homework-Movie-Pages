@@ -13,6 +13,7 @@ const Actors = ({ movieId }) => {
         axios(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${key}&language=en-US`)
             .then((res) => {
                 setActors(res.data.cast);
+                console.log(res)
             })
     };
 
@@ -29,6 +30,7 @@ const Actors = ({ movieId }) => {
                                 src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${el.profile_path}`}
                                 alt={el.name}
                                 onClick={() => navigate(`/person/${el.id}`)}
+                                loading="lazy"
                             />
                         </div>
                     ))}

@@ -1,8 +1,7 @@
 .componentsOn{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 40px 0 0 0;
+    padding: 150px 0 0 0;
     position: relative;
     z-index: 10;
 }

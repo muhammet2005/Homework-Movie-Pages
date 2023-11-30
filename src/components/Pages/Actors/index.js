@@ -13,7 +13,6 @@ const Actors = ({ movieId }) => {
         axios(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${key}&language=en-US`)
             .then((res) => {
                 setActors(res.data.cast);
-                console.log(res)
             })
     };
 

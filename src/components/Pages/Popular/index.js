@@ -29,7 +29,7 @@ const Popular = ({ dark }) => {
     }, [getPopular, sortVotes]);
 
     useEffect(() => {
-        console.log(popular);
+
     }, [popular]);
 
     const handleSortChange = (e) => {

@@ -6,6 +6,12 @@
   width: 400px;
   margin: 0 20px 0 0;
 }
+.actorDetail .actorsFilms--container {
+  width: 400px;
+}
+.actorDetail .actorBiography {
+  width: 750px;
+}
 .actorDetail .actorBiography span {
   color: green;
 }

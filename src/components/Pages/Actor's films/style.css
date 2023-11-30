@@ -1,0 +1,9 @@
+.actorsFilms {
+  width: 400px;
+}
+.actorsFilms .el--container {
+  display: flex;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

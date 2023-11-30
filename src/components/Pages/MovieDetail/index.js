@@ -80,7 +80,7 @@ const MovieDetail = () => {
                                 <div className="buttons" style={{display: 'flex',
                                     flexDirection:"column", gap: "10px"}}>
                                     <button onClick={toggleTrailer} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px" ,width :"200px"}}>Show Trailer</button>
-                                    <button onClick={showActors} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px",width :"200px"}}>{showActors ? 'Look down' : "Show Actors"}</button>
+                                    <button onClick={showActors} style={{ background: "green", border: "none",color: "white", padding: "10px 30px", fontSize: "18px",width :"200px"}}>Show Actors</button>
                                 </div>
 
                             </div>

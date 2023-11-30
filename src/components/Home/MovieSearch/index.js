@@ -39,6 +39,7 @@ const MovieSearch = () => {
             })
             .catch((error) => {
                 console.error('Error fetching search results:', error);
+
             });
     }
 

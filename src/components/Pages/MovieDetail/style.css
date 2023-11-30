@@ -67,3 +67,22 @@ h1{
 .vote div p {
     font-size: 16px;
 }
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buttons button{
+    background: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 30px;
+    font-size: 18px;
+    width : 200px;
+    transition: 0.5s;
+}
+.buttons button:hover{
+    background: none;
+}
+

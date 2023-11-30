@@ -22,14 +22,13 @@ a:hover{
     color: white;
 }
 .btn button{
-    background-color: black;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: Roboto sans-serif;
-    font-size: 19px;
-    font-weight: 500;
+    background: greenyellow;
+    border-radius: 28px;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
 }
 
 .headerInput{
@@ -42,7 +41,7 @@ a:hover{
 }
 .searchBtn{
     padding: 10px 20px;
-    border: none;
+    border: 1px solid greenyellow;
     background: greenyellow;
     border-radius: 28px;
     color: black;
@@ -51,7 +50,15 @@ a:hover{
 }
 
 .searchBtn:hover{
-    background: green;
+    background: none;
+    color: white;
 
 }
+/*.btn button{*/
+/*    border: 1px solid greenyellow;*/
+/*    transition: 0.5s;*/
+/*}*/
 
+/*.btn button:hover{*/
+/*    background: none;*/
+/*}*/

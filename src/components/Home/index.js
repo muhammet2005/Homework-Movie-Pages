@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from "./Hero";
+import "./style.scss"
 // import axios from "axios";
 
 const Home = () => {

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { key } from "../../API/api";
 import MovieCart from "../MovieCart";
+import "./style.scss"
 
 const NowPlaying = ({ dark }) => {
     const [nowPlaying, setNowPlaying] = useState([]);

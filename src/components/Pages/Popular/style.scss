@@ -1,15 +1,90 @@
-.nowPlaying--selector{
-  width: 150px;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  color: #222;
-  font-size: 20px;
-  font-family: 'roboto',  sans-serif;
-  transition: 1.5s ;
+#popular{
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 630px;
 
-  option{
-    color: #222;
-    transition: 1.5s ;
+    h1{
+      text-align: center;
+      color: red;
+
+    }
+
+    .nowPlaying--selector{
+      display: flex;
+      margin: 0 0 0 70px;
+      width: 150px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      color: #222;
+      font-size: 20px;
+      font-family: 'roboto',  sans-serif;
+      transition: 1.5s ;
+
+       option{
+         color: #222;
+         transition: 1.5s ;
+       }
+    }
+
+
   }
 }
+.popular{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 30px;
+
+  .popularMovies{
+    width: 230px;
+    height: 340px;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+
+  .popularMovies::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 140%;
+    background: linear-gradient(#70e11e, #ee7526);
+    animation: animate 4s linear infinite;
+    border-radius: 10px;
+
+    @keyframes animate {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(350deg);
+      }
+    }
+  }
+
+  img:hover {
+    width: 3400px;
+  }
+  .popularMovies img{
+    z-index: 10;
+    border-radius: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { key } from '../../API/api';
 import "../../../App.css"
-
+import "./style.scss"
 const MovieTrailer = () => {
     const [trailer, setTrailer] = useState([]);
     const { id } = useParams(); // Extract 'id' from the params object
@@ -28,11 +28,7 @@ const MovieTrailer = () => {
         <>
             <div>
                 {trailer.slice(0, 1).map((el) => (
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            margin: "300px 0 100px 0 "
-                        }}>
+                        <div className="trailer">
                             <iframe
                                 key={el.key} // Add a key for each iframe
                                 width="760"

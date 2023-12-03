@@ -2,11 +2,13 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {key} from "../../API/api";
 import MovieCart from "../MovieCart";
+import "./style.scss"
 
 const TopRated = ({dark}) => {
     const [topRated,SetTopRated] = useState([])
     const [sortVotes, setSortVotes] = useState('desc'); // Default sorting order is descending
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getTopRated = () => {
         axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=3`)
             .then(res => {
@@ -22,7 +24,7 @@ const TopRated = ({dark}) => {
     };
     useEffect(() => {
         getTopRated()
-    }, [sortVotes])
+    }, [getTopRated, sortVotes])
 
     const handleSortChange = (e) => {
         setSortVotes(e.target.value);

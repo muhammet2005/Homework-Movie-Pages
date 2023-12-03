@@ -39,13 +39,18 @@ const Popular = ({ dark }) => {
     return (
         <div id='popular'>
             <div className='container'>
-                <h1 style={{ color: dark ? "black" : "white" }}>
-                    Popular
+                <div className="title">
                     <select className={"nowPlaying--selector"} onChange={handleSortChange} value={sortVotes}>
                         <option value="desc">Highest Rated </option>
                         <option value="asc">Lowest Rated </option>
                     </select>
-                </h1>
+                    <h1 style={{ color: dark ? "black" : "white" }}>
+                        Popular
+
+                    </h1>
+                </div>
+
+
                 <div className='popular'>
                     {popular.map(el => <MovieCart elem={el} nameClass={"popularMovies"} key={el.id} />)}
                 </div>

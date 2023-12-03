@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { key } from '../../API/api';
 import { useParams } from 'react-router-dom';
-import './style.css';
+import './style.scss';
 import MovieTrailer from '../MovieTrailer';
 import Actors from "../Actors";
 
@@ -51,15 +51,15 @@ const MovieDetail = () => {
                             <div className="movieDetail--info">
                                 <h1>
                                     {' '}
-                                    <span style={{ color: 'green'}}>Name of the movie: </span> {detail.title}
+                                    <span>Name of the movie: </span> {detail.title}
                                 </h1>
                                 <p>
                                     {' '}
-                                    <span style={{ color: 'green' }}>Release date: </span> {detail.release_date}
+                                    <span>Release date: </span> {detail.release_date}
                                 </p>
                                 <p>
                                     {' '}
-                                    <span style={{ color: 'green' }}>Description: </span> <br />
+                                    <span>Description: </span> <br />
                                     {detail.overview}
                                 </p>
 

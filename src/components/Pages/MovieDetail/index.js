@@ -25,13 +25,14 @@ const MovieDetail = () => {
         getId();
     }, [getId, id]);
 
+    const showActors = ()=>{
+        setActors(!actors)
+    }
     const toggleTrailer = () => {
         setShowTrailer(!showTrailer);
     };
 
-    const showActors = ()=>{
-        setActors(!actors)
-    }
+
 
     return (
         <div

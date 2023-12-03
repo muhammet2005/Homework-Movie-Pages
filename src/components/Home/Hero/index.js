@@ -1,14 +1,14 @@
 import React from 'react';
 import "./style.css"
 
-const Hero = () => {
+const Hero = ({dark}) => {
 
     return (
         <div id="hero">
             <div className="container">
                 <div className="hero">
                     <div className="hero--title">
-                        <h1>В Тренде</h1>
+                        <h1 style={{color: dark? "black" : "white"}}>В Тренде</h1>
 
                         <div className="sliders">
                             <label className="switch">

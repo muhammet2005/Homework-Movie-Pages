@@ -5,12 +5,13 @@ import MovieCart from "../MovieCart";
 import "./style.scss"
 
 const UpComing = ({dark}) => {
+    const [page,setPage] = useState(1)
     const [upComing,SetUpComing] = useState([])
     const [sortVotes, setSortVotes] = useState('desc'); // Default sorting order is descending
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const getUpComing = () => {
-        axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=3`)
+        axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=${page}`)
             .then(res => {
                 const sortedResults = res.data.results.sort((a, b) => {
                     if (sortVotes === 'asc') {
@@ -45,6 +46,14 @@ const UpComing = ({dark}) => {
                     {
                         upComing.map(el => <MovieCart elem={el} nameClass={"upComingMovies"}/>)
                     }
+                </div>
+
+                <div className="pageButtons">
+                    {page > 1 && <button className="minusBtn" onClick={()=>setPage(page - 1)}>Prev</button>}
+                    <h1 style={{color: dark? "black" : "white", position: "absolute",
+                        left: "610px",}}>{page}</h1>
+                    {page < 100 && <button className="plusBtn" onClick={()=>setPage(page + 1)}>Next</button>}
+
                 </div>
             </div>
         </div>

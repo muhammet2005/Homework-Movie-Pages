@@ -3,21 +3,24 @@ import Hero from "./Hero";
 import "./style.scss"
 // import axios from "axios";
 
-const Home = () => {
+const Home = ({dark}) => {
 
 
 
     return (
         <div id={"home"}>
             <div className="container">
-                <h1 className={"home_title"}>Home</h1>
+                <h1 style={{color: dark? "black" : "white"}} className={"home_title"}>Home</h1>
                 <div className="home">
-                    <h1>Добро пожаловать..</h1>
-                    <h3>Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</h3>
+                    <h1 style={{color: dark? "black" : "white"}}>Добро пожаловать..</h1>
+                    <h3 style={{color: dark? "black" : "white"}}>Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</h3>
+
+
+
                 </div>
             </div>
 
-            <Hero />
+            <Hero  dark={dark}/>
         </div>
     );
 };

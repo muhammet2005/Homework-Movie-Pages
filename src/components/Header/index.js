@@ -71,11 +71,12 @@ const Header = ({dark,setDark}) => {
                         onChange={(e) => setValue(e.target.value)}
                         placeholder={"Search movie..."}
                     />
-                    <button  className={"searchBtn"} onClick={handleSearch}>Search</button>
+                    <button  style={{cursor: "pointer"}} className={"searchBtn"} onClick={handleSearch}>Search</button>
                     <div className="btn">
                         <button onClick={()=>{
                             setDark(!dark)
                          }}  style={{
+                             cursor:"pointer",
                             width: '100px',
                             backgroundColor: dark ? '#222' : '#c9b7b7',
                             color: dark ? '#c9b7b7' : '#222', }}>

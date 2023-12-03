@@ -1,0 +1,31 @@
+.pageButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 30px 0;
+    align-items: center;
+}
+
+    button{
+        padding: 10px 30px;
+        color: black;
+        background: green;
+        border: 1px solid green;
+        border-radius: 10px;
+        font-size: 20px ;
+        font-family: 'roboto', sans-serif;
+    }
+    button:hover{
+        color: white;
+        background: none;
+        transition: 0.5s;
+    }
+    .minusBtn{
+        position: absolute;
+        left: 80px;
+        padding: 15px 30px;
+    }
+    .plusBtn{
+        position: absolute;
+        right: 80px;
+        padding: 15px 30px;
+    }

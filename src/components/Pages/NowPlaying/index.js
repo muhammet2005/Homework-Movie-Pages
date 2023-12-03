@@ -6,12 +6,14 @@ import MovieCart from "../MovieCart";
 import "./style.scss"
 
 const NowPlaying = ({ dark }) => {
+    const [page,setPage] = useState(1)
+
     const [nowPlaying, setNowPlaying] = useState([]);
     const [sortVotes, setSortVotes] = useState('desc'); // Default sorting order is descending
 
     useEffect(() => {
         const getNowPlaying = () => {
-            axios(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=3`)
+            axios(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=${page}`)
                 .then(res => {
                     // Sort the results by vote_average and sortOrder
                     const sortedResults = res.data.results.sort((a, b) => {
@@ -26,7 +28,7 @@ const NowPlaying = ({ dark }) => {
         };
 
         getNowPlaying();
-    }, [sortVotes]);
+    }, [page, sortVotes]);
 
     const handleSortChange = (e) => {
         setSortVotes(e.target.value);
@@ -45,6 +47,14 @@ const NowPlaying = ({ dark }) => {
 
                 <div className='nowPlaying'>
                     {nowPlaying.map(el => <MovieCart elem={el} nameClass={"movieInfo"} key={el.id} />)}
+                </div>
+
+                <div className="pageButtons">
+                    {page > 1 && <button className="minusBtn" onClick={()=>setPage(page - 1)}>Prev</button>}
+                    <h1 style={{color: dark? "black" : "white", position: "absolute",
+                        left: "610px",}}>{page}</h1>
+                    {page < 100 && <button className="plusBtn" onClick={()=>setPage(page + 1)}>Next</button>}
+
                 </div>
             </div>
         </div>

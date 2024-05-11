@@ -15,6 +15,7 @@ const NowPlaying = ({ dark }) => {
         const getNowPlaying = () => {
             axios(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=${page}`)
                 .then(res => {
+                    console.log(res.data)
                     // Sort the results by vote_average and sortOrder
                     const sortedResults = res.data.results.sort((a, b) => {
                         if (sortVotes === 'asc') {

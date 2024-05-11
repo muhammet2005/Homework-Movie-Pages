@@ -1,1 +1,3 @@
-    export const key = "45d1d56fc54beedb6c0207f9ac6cab7c"
+/** @format */
+
+export const key = "e51d77e3e20fe3d09d8102596966f8a9"

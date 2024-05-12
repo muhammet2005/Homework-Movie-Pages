@@ -1,4 +1,4 @@
-// Header.js
+
 import React, {useEffect, useState} from 'react';
 import "./style.css";
 import Logo from "../../assets/img/popCorn.png";
@@ -16,10 +16,10 @@ const Header = ({dark,setDark}) => {
             }
         };
 
-        // Add an event listener for keydown
+        
         document.addEventListener('keydown', handleEnterKey);
 
-        // Cleanup the event listener when the component unmounts
+       
         return () => {
             document.removeEventListener('keydown', handleEnterKey);
         };
